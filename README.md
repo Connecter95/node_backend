@@ -16,3 +16,13 @@ then use
 ```
 npm run dev
 ```
+
+Configure Database Setting
+- config/config.json
+- create .env from sample .env.example 
+
+Run Migration & Seeder
+```
+sequelize db:migrate
+sequelize db:seed:all
+```

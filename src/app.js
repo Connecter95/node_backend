@@ -26,6 +26,10 @@ app.use(cors({
     origin: AppConfig.clientHost
 }));
 
+app.get('/', (req, res) => {
+    res.redirect('/api-docs');
+});
+
 // Serve API documentation using Swagger UI
 const swaggerDocument = YAML.load('./swagger.yaml');
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
